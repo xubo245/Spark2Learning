@@ -1,0 +1,221 @@
+	/usr/bin/python3.5 /xubo/git/spark/examples/src/main/python/pi.py
+	18/01/21 21:44:49 WARN Utils: Your hostname, hadoop resolves to a loopback address: 127.0.0.1; using 10.229.51.168 instead (on interface eth0)
+	18/01/21 21:44:49 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+	18/01/21 21:44:49 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+	Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+	Setting default log level to "WARN".
+	To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+	18/01/21 21:44:50 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+	18/01/21 21:44:52 ERROR Executor: Exception in task 1.0 in stage 0.0 (TID 1)
+	org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+	  File "/xubo/git/spark/python/lib/pyspark.zip/pyspark/worker.py", line 175, in main
+	    ("%d.%d" % sys.version_info[:2], version))
+	Exception: Python in worker has different version 2.7 than that in driver 3.5, PySpark cannot run with different minor versions.Please check environment variables PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON are correctly set.
+	
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:298)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:438)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:421)
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:252)
+		at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+		at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+		at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+		at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:59)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:104)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:48)
+		at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:310)
+		at org.apache.spark.InterruptibleIterator.to(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:302)
+		at org.apache.spark.InterruptibleIterator.toBuffer(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:289)
+		at org.apache.spark.InterruptibleIterator.toArray(InterruptibleIterator.scala:28)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+		at org.apache.spark.scheduler.Task.run(Task.scala:109)
+		at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		at java.lang.Thread.run(Thread.java:748)
+	18/01/21 21:44:52 ERROR Executor: Exception in task 0.0 in stage 0.0 (TID 0)
+	org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+	  File "/xubo/git/spark/python/lib/pyspark.zip/pyspark/worker.py", line 175, in main
+	    ("%d.%d" % sys.version_info[:2], version))
+	Exception: Python in worker has different version 2.7 than that in driver 3.5, PySpark cannot run with different minor versions.Please check environment variables PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON are correctly set.
+	
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:298)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:438)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:421)
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:252)
+		at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+		at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+		at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+		at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:59)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:104)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:48)
+		at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:310)
+		at org.apache.spark.InterruptibleIterator.to(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:302)
+		at org.apache.spark.InterruptibleIterator.toBuffer(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:289)
+		at org.apache.spark.InterruptibleIterator.toArray(InterruptibleIterator.scala:28)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+		at org.apache.spark.scheduler.Task.run(Task.scala:109)
+		at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		at java.lang.Thread.run(Thread.java:748)
+	18/01/21 21:44:52 WARN TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1, localhost, executor driver): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+	  File "/xubo/git/spark/python/lib/pyspark.zip/pyspark/worker.py", line 175, in main
+	    ("%d.%d" % sys.version_info[:2], version))
+	Exception: Python in worker has different version 2.7 than that in driver 3.5, PySpark cannot run with different minor versions.Please check environment variables PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON are correctly set.
+	
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:298)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:438)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:421)
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:252)
+		at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+		at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+		at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+		at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:59)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:104)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:48)
+		at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:310)
+		at org.apache.spark.InterruptibleIterator.to(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:302)
+		at org.apache.spark.InterruptibleIterator.toBuffer(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:289)
+		at org.apache.spark.InterruptibleIterator.toArray(InterruptibleIterator.scala:28)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+		at org.apache.spark.scheduler.Task.run(Task.scala:109)
+		at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		at java.lang.Thread.run(Thread.java:748)
+	
+	18/01/21 21:44:52 ERROR TaskSetManager: Task 1 in stage 0.0 failed 1 times; aborting job
+	Traceback (most recent call last):
+	  File "/xubo/git/spark/examples/src/main/python/pi.py", line 44, in <module>
+	    count = spark.sparkContext.parallelize(range(1, n + 1), partitions).map(f).reduce(add)
+	  File "/xubo/git/spark/python/pyspark/rdd.py", line 850, in reduce
+	    vals = self.mapPartitions(func).collect()
+	  File "/xubo/git/spark/python/pyspark/rdd.py", line 824, in collect
+	    port = self.ctx._jvm.PythonRDD.collectAndServe(self._jrdd.rdd())
+	  File "/xubo/git/spark/python/lib/py4j-0.10.6-src.zip/py4j/java_gateway.py", line 1160, in __call__
+	  File "/xubo/git/spark/python/pyspark/sql/utils.py", line 63, in deco
+	    return f(*a, **kw)
+	  File "/xubo/git/spark/python/lib/py4j-0.10.6-src.zip/py4j/protocol.py", line 320, in get_return_value
+	py4j.protocol.Py4JJavaError: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.collectAndServe.
+	: org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 0.0 failed 1 times, most recent failure: Lost task 1.0 in stage 0.0 (TID 1, localhost, executor driver): org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+	  File "/xubo/git/spark/python/lib/pyspark.zip/pyspark/worker.py", line 175, in main
+	    ("%d.%d" % sys.version_info[:2], version))
+	Exception: Python in worker has different version 2.7 than that in driver 3.5, PySpark cannot run with different minor versions.Please check environment variables PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON are correctly set.
+	
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:298)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:438)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:421)
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:252)
+		at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+		at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+		at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+		at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:59)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:104)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:48)
+		at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:310)
+		at org.apache.spark.InterruptibleIterator.to(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:302)
+		at org.apache.spark.InterruptibleIterator.toBuffer(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:289)
+		at org.apache.spark.InterruptibleIterator.toArray(InterruptibleIterator.scala:28)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+		at org.apache.spark.scheduler.Task.run(Task.scala:109)
+		at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		at java.lang.Thread.run(Thread.java:748)
+	
+	Driver stacktrace:
+		at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1590)
+		at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1578)
+		at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1577)
+		at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+		at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+		at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1577)
+		at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+		at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:831)
+		at scala.Option.foreach(Option.scala:257)
+		at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:831)
+		at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1811)
+		at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1760)
+		at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1749)
+		at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+		at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:642)
+		at org.apache.spark.SparkContext.runJob(SparkContext.scala:2027)
+		at org.apache.spark.SparkContext.runJob(SparkContext.scala:2048)
+		at org.apache.spark.SparkContext.runJob(SparkContext.scala:2067)
+		at org.apache.spark.SparkContext.runJob(SparkContext.scala:2092)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:937)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+		at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+		at org.apache.spark.rdd.RDD.withScope(RDD.scala:363)
+		at org.apache.spark.rdd.RDD.collect(RDD.scala:936)
+		at org.apache.spark.api.python.PythonRDD$.collectAndServe(PythonRDD.scala:153)
+		at org.apache.spark.api.python.PythonRDD.collectAndServe(PythonRDD.scala)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+		at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+		at py4j.Gateway.invoke(Gateway.java:282)
+		at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+		at py4j.commands.CallCommand.execute(CallCommand.java:79)
+		at py4j.GatewayConnection.run(GatewayConnection.java:214)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+	  File "/xubo/git/spark/python/lib/pyspark.zip/pyspark/worker.py", line 175, in main
+	    ("%d.%d" % sys.version_info[:2], version))
+	Exception: Python in worker has different version 2.7 than that in driver 3.5, PySpark cannot run with different minor versions.Please check environment variables PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON are correctly set.
+	
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:298)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:438)
+		at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRunner.scala:421)
+		at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:252)
+		at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+		at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+		at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+		at scala.collection.generic.Growable$class.$plus$plus$eq(Growable.scala:59)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:104)
+		at scala.collection.mutable.ArrayBuffer.$plus$plus$eq(ArrayBuffer.scala:48)
+		at scala.collection.TraversableOnce$class.to(TraversableOnce.scala:310)
+		at org.apache.spark.InterruptibleIterator.to(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toBuffer(TraversableOnce.scala:302)
+		at org.apache.spark.InterruptibleIterator.toBuffer(InterruptibleIterator.scala:28)
+		at scala.collection.TraversableOnce$class.toArray(TraversableOnce.scala:289)
+		at org.apache.spark.InterruptibleIterator.toArray(InterruptibleIterator.scala:28)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.rdd.RDD$$anonfun$collect$1$$anonfun$13.apply(RDD.scala:937)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2067)
+		at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+		at org.apache.spark.scheduler.Task.run(Task.scala:109)
+		at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:345)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		... 1 more
+	
+	
+	Process finished with exit code 1
